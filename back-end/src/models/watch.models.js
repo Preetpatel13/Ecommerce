@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-
+import mongoose from "mongoose";
 const watchSchema = new mongoose.Schema({
     id: {
         type: String,
@@ -10,6 +9,10 @@ const watchSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    price :{
+      type:String,
+      required : true
+    },
     imageLink: {
         type: String,
         required: true
@@ -19,8 +22,7 @@ const watchSchema = new mongoose.Schema({
         required: true
     },
     // Add other fields as needed
+
 }, { timestamps: true });
 
-const Watch = mongoose.model('Watch', watchSchema);
-
-module.exports = Watch;
+export const Watch = mongoose.model('Watch', watchSchema);
