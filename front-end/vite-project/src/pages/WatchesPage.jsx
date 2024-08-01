@@ -23,8 +23,7 @@ const WatchesPage = () => {
 
   return (
     <div className="container mx-auto mt-8">
-      <PaymentForm/>
-      {/* Header Section */}
+     {/* Header Section */}
       <header className="text-center mb-8 relative">
         <video
           className="w-full h-full object-cover rounded-lg"

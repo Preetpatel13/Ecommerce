@@ -1,8 +1,12 @@
 // controllers/paymentController.js
+import dotenv from 'dotenv';
+import stripePackage from 'stripe';
 
-import stripe from 'stripe';
+// Load environment variables from .env file
+dotenv.config();
 
-const stripeInstance = stripe(process.env.STRIPE_SECRET_KEY);
+// Initialize Stripe with your secret key
+const stripeInstance = stripePackage(process.env.STRIPE_SECRET_KEY);
 
 const handlePayment = async (amount, token) => {
   try {

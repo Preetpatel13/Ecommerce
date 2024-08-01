@@ -19,7 +19,7 @@ const WatchDetails = ({ watchesData }) => {
       if (watchDetails) {
         const newProduct = {
           name: watchDetails.roller_title,
-          image: watchDetails.roller_src,
+          image: watchDetails.img_srcset,
           price: watchDetails.watch_price
         };
         setProduct(newProduct);
@@ -88,15 +88,15 @@ const WatchDetails = ({ watchesData }) => {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">
               <p className="text-xl font-semibold text-gray-700 mr-4">Price: ${watchDetails.watch_price}</p>
-              <button className="bg-blue-500 text-white px-6 py-2 rounded shadow hover:bg-blue-600 transition-colors mr-4">
+              <button className="bg-gray-800 text-white px-6 py-2 rounded shadow hover:bg-gray-900 transition-colors mr-4">
                 <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
                 Add to Cart
               </button>
-              <button onClick={handleAddToWishlist} className="bg-red-500 text-white px-6 py-2 rounded shadow hover:bg-red-600 transition-colors mr-4">
+              <button onClick={handleAddToWishlist} className="bg-gray-800 text-white px-6 py-2 rounded shadow hover:bg-gray-900 transition-colors mr-4">
                 <FontAwesomeIcon icon={faHeart} className="mr-2" />
                 Add to Wishlist
               </button>
-              <button onClick={handleBuyNow} className="bg-green-500 text-white px-6 py-2 rounded shadow hover:bg-green-600 transition-colors">
+              <button onClick={handleBuyNow} className="bg-gray-800 text-white px-6 py-2 rounded shadow hover:bg-gray-900 transition-colors">
                 Buy Now
               </button>
             </div>

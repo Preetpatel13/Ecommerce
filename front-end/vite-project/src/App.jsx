@@ -15,6 +15,8 @@ import './globalcss.css';
 import AuthPage from './pages/AuthPage';
 import Register from './components/Register.jsx';
 import ProfileCard from './components/Profile.jsx';
+import Success from './components/Success.jsx';
+import Failure from './components/Failure.jsx';
 
 const stripePromise = loadStripe('pk_test_51PMmmVP65nEgGGzd49NOGWaW7Z6nS4J33kMrN1OMFsp2pbWyy295VX56h1dMQ9funpw83G4cnI12XZ1W7jHsDl4a00pGtEci5x');
 
@@ -44,6 +46,8 @@ const MainLayout = () => {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/failure" element={<Failure />} />
 
         <Route path="/profile" element={<ProfileCard/>} />
              

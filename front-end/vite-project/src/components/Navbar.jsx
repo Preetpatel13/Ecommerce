@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faShoppingBag, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faShoppingBag, faHeart, faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 const Navbar = () => {
-  const { username } = useAuth(); // Assuming useAuth returns an object with user information
+  const { username, isAuthenticated, logout } = useAuth(); // Now includes isAuthenticated
 
   return (
     <nav className="bg-gray-100 text-gray-700 p-4">
@@ -41,6 +41,31 @@ const Navbar = () => {
               <span className="hidden md:inline">Wishlist</span>
             </Link>
           </li>
+          {isAuthenticated ? (
+            <li>
+              <button
+                onClick={logout}
+                className="text-gray-700 hover:text-gray-900 transition duration-300"
+              >
+                Logout
+              </button>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to="/login" className="text-gray-700 hover:text-gray-900 transition duration-300">
+                  <FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link to="/register" className="text-gray-700 hover:text-gray-900 transition duration-300">
+                  <FontAwesomeIcon icon={faUserPlus} className="mr-2" />
+                  Register
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </div>
     </nav>

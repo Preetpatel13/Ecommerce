@@ -3,6 +3,9 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import Stripe from 'stripe';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Initialize Stripe with your secret key
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -51,5 +54,9 @@ app.post('/api/create-checkout-session', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+import userRouter from './routes/user.routes.js'
+app.use("/user",userRouter)
+
 
 export { app };

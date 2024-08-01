@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Dependency directories
+jspm_packages/
+
+# Optional: MacOS specific files
+.DS_Store
+
+# Optional: Windows specific files
+Thumbs.db
+
+# Optional: VSCode specific files
+.vscode/
