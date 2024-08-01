@@ -33,16 +33,16 @@ Thumbs.db
 .Desktop.ini
 
 # Frontend-specific
-frontend/node_modules/
-frontend/.next/
-frontend/.nuxt/
-frontend/.cache/
-frontend/.parcel-cache/
-frontend/build/
-frontend/dist/
+front-end/vite-project/node_modules/
+front-end/vite-project/.next/
+front-end/vite-project/.nuxt/
+front-end/vite-project/.cache/
+front-end/vite-project/.parcel-cache/
+front-end/vite-project/build/
+front-end/vite-project/dist/
 
 # Backend-specific
-backend/node_modules/
-backend/.env
-backend/dist/
-backend/build/
+back-end/node_modules/
+back-end/.env
+back-end/dist/
+back-end/build/
